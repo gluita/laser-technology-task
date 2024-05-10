@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="navbar">
+        <!-- <img src="./assests/logo.png" alt="Laser Technologies Logo" class="navbar-logo" /> -->
+        <img src="{{ url_for('static', filename='./assests/logo.png') }}" alt="Laser Technologies Logo" class="navbar-logo" />
+      </div>
+      <!-- <div class="frame-0  p-5"> -->
+      <div class="frame0-container">
+        <div class="frame-1">
+          <!-- <img src="./assests/Rectangle 121.png" alt="Rectangle" /> -->
+          <img src="{{ url_for('static', filename='./assests/Rectangle 121.png') }}" alt="Rectangle" class="home-logo" />
+
+          <div class="frame-1-text">
+            <h1 class="title1 text-white position-absolute top-0">Get in touch</h1>
+            <p class="title2 text-white position-absolute">Need our expertise for choosing your next laser <br />machine?</p>
+          </div>
+        </div>
+        <div class="frame-2">
+          <p class="frame-2-title">Fill out the form to get a free consultation.</p>
+          <form class="frame-2-grid" id="myForm">
+            <div class="input-box-div">
+              <input type="text" class="input-box" placeholder="Your Name" required name="name" id="name" /> <br />
+              <span id="nameError" style="color: red; display: none">Please enter a valid name </span>
+            </div>
+            <div class="input-box-div">
+              <input type="text" class="input-box" placeholder="Organisation Name" required name="org-name" id="org-name" />
+            </div>
+            <div class="input-box-div">
+              <input type="text" id="contact" class="input-box" placeholder="Contact Number" required name="contact" /> <br />
+              <span id="phoneError" style="color: red; display: none">Please enter a valid phone number</span>
+            </div>
+            <div class="input-box-div">
+              <input type="text" class="input-box" placeholder="Email ID" required name="email" id="email" /> <br />
+              <span id="emailError" style="color: red; display: none">Please enter a valid email </span>
+            </div>
+            <div class="input-box-div">
+              <textarea rows="8" cols="30" placeholder="Enter your text here..." class="remark input-box-div-1"></textarea>
+            </div>
+            <div class="input-box-wide">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Ld8JtcpAAAAAAg4JARvoxHm5phDOFdk3HmZKNGR
+"
+              ></div>
+              <br />
+              <input type="submit" value="Submit" class="submit-btn" />
+              <div id="success-message" class="success_message">Form submitted successfully!</div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d942.2967927063844!2d73.00632943775328!3d19.143282554560106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfeb4288ae8d%3A0x8b330290504e58fa!2sLaser%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1715273756248!5m2!1sen!2sin"
+          width="auto"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="city-container-box">
+        <div class="city-container">
+          <div class="city-box">
+            <h1 class="main-title">Mumbai</h1>
+            <p>PAP/R/406 Rabale MIDC Near Dol Electric Company Rabale MIDC, Navi Mumbai - 400701.</p>
+            <h2>M</h2>
+          </div>
+          <div class="city-box">
+            <h1 class="main-title">Pune</h1>
+            <h2>P</h2>
+            <p>"S" Block, plot No.186, MIDC, Bhosari Pune - 411026</p>
+          </div>
+          <div class="city-box">
+            <h1 class="main-title">Gujarat</h1>
+            <p>A-5, GF, Barcelona Multiple Business Campus, Odhav Ring Road Circle, Ahmedabad, Gujarat - 382430</p>
+            <h2>G</h2>
+          </div>
+          <div class="city-box">
+            <h1 class="main-title">Delhi</h1>
+            <h2>D</h2>
+            <p>
+              S-98 Second Floor Phase-2, Okhla Industrial Area ,<br />
+              New Delhi - 110020
+            </p>
+          </div>
+          <div class="city-box">
+            <h1 class="main-title">Karnataka</h1>
+            <p>77/78/B, Janapriya Commercial Complex, Magadi Main Rd, Sunkadakatte, Bengaluru, Karnataka - 560091</p>
+            <h2>K</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-3">
+        <h1 class="page-3-title">How can we help?</h1>
+        <div class="page-3-content">
+          <div class="content-box">
+            <div class="content-box-content">
+              <!-- <img src="./assests/demo.png" alt="demo" /> -->
+              <img src="{{ url_for('static', filename='./assests/demo.png') }}" alt="demo" />
+
+              <p class="page-3-text">Schedule a</p>
+              <h1>Demo</h1>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-content">
+              <!-- <img src="./assests/Quote icon.png" alt="demo" /> -->
+              <img src="{{ url_for('static', filename='./assests/Quote icon.png') }}" alt="demo" />
+
+              <p class="page-3-text">Request a</p>
+              <h1>Quote</h1>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-content">
+              <!-- <img src="./assests/sample.png" alt="demo" /> -->
+              <img src="{{ url_for('static', filename='./assests/sample.png') }}" alt="demo" />
+
+              <p class="page-3-text">Send us a</p>
+              <h1>Sample</h1>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-box-content">
+              <!-- <img src="./assests/Call for ticket icon.png" alt="demo" /> -->
+              <img src="{{ url_for('static', filename='./assests/Call for ticket icon.png') }}" alt="demo" />
+
+              <p class="page-3-text">Raise your</p>
+              <h1>Query</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- </div> -->
+    </div>
+    <div class="footer">
+      <div class="footer-blob">
+        <img src="{{ url_for('static', filename='./assests/Rectangle 61.png') }}" alt="demo" class="rectangle" />
+        <div class="footer-blob-content">
+          <p class="footer-blob-text">Subscribe to our newsletter & stay updated</p>
+          <div class="footer-subscribe-email-box">
+            <input type="text" class="subscribe-email" />
+            <button class="subscribe-button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="./assests/icon-white.png" alt="" class="footer-logo" /> -->
+      <div class="footer-logo-div">
+        <img src="{{ url_for('static', filename='./assests/icon-white.png') }}" alt="demo" class="footer-logo" />
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
